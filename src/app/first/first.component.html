@@ -1,0 +1,22 @@
+<!-- 畫面迴圈寫法跟TS寫法差不多 -->
+<!-- 開頭為@for (變數名稱 of 陣列名稱; track 唯一值) -->
+<!-- track 唯一值是Angular用來減輕系統處理資料的寫法 -->
+<!-- 可以固定為track $index 用資料再陣列中的位置來當唯一值 -->
+<!-- <div style="border: 2px solid;">
+  @for (data of arrayData;track $index) {
+  <h2>{{ data }}</h2>
+  }
+</div> -->
+
+<!-- @for (data of arrayData; track $index) {
+  <div style="border: 2px solid;">
+    <h4 style="text-align: center;">{{ data.userName }}(等級：{{ data.lev }})</h4>
+    <h5>擁有道具：</h5>
+    <ol>
+      @for (prop of data.props; track $index) {
+        <li>{{ prop.propsName }} 數量： {{ prop.amount }}</li>
+      }
+    </ol>
+  </div>
+  <br>
+} -->

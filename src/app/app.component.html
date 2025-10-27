@@ -1,0 +1,28 @@
+<div style="text-align: center;">
+  <h4>{{ Locations?.DatasetDescription }}</h4>
+  <h4>{{ Locations?.LocationsName }}</h4>
+</div>
+<span>選擇地區：{{ chooseLocation }}</span>
+<br>
+@for (location of Location; track $index) {
+  <button style="margin: 2px;" (click)="chooseLocationClick(location)">{{ location.LocationName }}</button>
+}
+<hr>
+<br>
+
+@if (chooseLocation) {
+  <span>選擇氣候：{{ chooseWeather }}</span>
+  <br>
+  @for (weather of Weather; track $index) {
+    <button style="margin: 2px;" (click)="chooseWeatherClick(weather)" >{{ weather.ElementName }}</button>
+  }
+  <hr>
+  <br>
+  <h5 style="text-align: center;">{{ chooseWeather }}</h5>
+  @for (data of weatherData; track $index) {
+    <div style="border: 2px solid; margin: 2px;">
+      時間：{{ data.DataTime }}<br>
+      溫度：{{ data.ElementValue[0].Temperature }}
+    </div>
+  }
+}

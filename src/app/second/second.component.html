@@ -1,0 +1,19 @@
+<!-- <label>使用者名稱：</label>
+<h4>{{ userName }}</h4>
+
+<label>使用者Email：</label>
+<h4>{{ userEmail }}</h4>
+
+<label>使用者地址：</label>
+<h4>{{ userAddress }}</h4> -->
+<label>使用者名稱：</label>
+<input [(ngModel)]="userName">
+<br>
+<label>使用者Email：</label>
+<input [(ngModel)]="userEmail">
+<br>
+<label>使用者地址：</label>
+<input [(ngModel)]="userAddress">
+<br>
+
+<button (click)="send()">組件觸發output</button>
